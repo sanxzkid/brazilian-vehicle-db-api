@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ReferenceModule } from './reference/reference.module';
-import { UserModule } from './user/user.module';
+import { ScheduleModule } from '@nestjs/schedule';
+import { FipeModule } from './fipe/fipe.module';
 
 @Module({
-  imports: [ReferenceModule, UserModule],
+  imports: [ScheduleModule.forRoot(), FipeModule],
 })
 export class AppModule {}
